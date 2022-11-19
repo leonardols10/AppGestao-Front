@@ -30,6 +30,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ColaboradorListComponent } from './components/colaborador/colaborador-list/colaborador-list.component';
+import { LoginComponent } from './components/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { ColaboradorListComponent } from './components/colaborador/colaborador-l
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    ColaboradorListComponent
+    ColaboradorListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,11 @@ import { ColaboradorListComponent } from './components/colaborador/colaborador-l
     MatIconModule,
     MatListModule,
     MatCardModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar:true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
