@@ -32,6 +32,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ColaboradorListComponent } from './components/colaborador/colaborador-list/colaborador-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     HeaderComponent,
     ColaboradorListComponent,
-    LoginComponent
+    LoginComponent,
+    ColaboradorCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +76,9 @@ import { ToastrModule } from 'ngx-toastr';
       progressBar:true
     })
   ],
-  providers: [],
+  providers: [
+    AuthInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
