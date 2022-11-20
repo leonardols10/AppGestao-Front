@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
+import { clienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { clienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { clienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { clienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component';
 import { ColaboradorDeleteComponent } from './components/colaborador/colaborador-delete/colaborador-delete.component';
 import { ColaboradorListComponent } from './components/colaborador/colaborador-list/colaborador-list.component';
@@ -18,7 +22,13 @@ const routes: Routes = [
       {path: 'colaboradores', component: ColaboradorListComponent},
       {path: 'colaboradores/create', component: ColaboradorCreateComponent},
       {path: 'colaboradores/update/:id', component: ColaboradorUpdateComponent},
-      {path: 'colaboradores/delete/:id', component: ColaboradorDeleteComponent}
+      {path: 'colaboradores/delete/:id', component: ColaboradorDeleteComponent},
+
+      {path: 'clientes', component: clienteListComponent},
+      {path: 'clientes/create', component: clienteCreateComponent},
+      {path: 'clientes/update/:id', component: clienteUpdateComponent},
+      {path: 'clientes/delete/:id', component: clienteDeleteComponent}
+
 
 
 

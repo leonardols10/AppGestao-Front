@@ -37,6 +37,10 @@ import { ColaboradorCreateComponent } from './components/colaborador/colaborador
 import { NgxMaskModule } from 'ngx-mask';
 import { ColaboradorUpdateComponent } from './components/colaborador/colaborador-update/colaborador-update.component';
 import { ColaboradorDeleteComponent } from './components/colaborador/colaborador-delete/colaborador-delete.component';
+import { clienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { clienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { clienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { clienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 
 
 @NgModule({
@@ -49,7 +53,12 @@ import { ColaboradorDeleteComponent } from './components/colaborador/colaborador
     LoginComponent,
     ColaboradorCreateComponent,
     ColaboradorUpdateComponent,
-    ColaboradorDeleteComponent
+    ColaboradorDeleteComponent,
+    clienteCreateComponent,
+    clienteDeleteComponent,
+    clienteListComponent,
+    clienteUpdateComponent
+    
   ],
   imports: [
     BrowserModule,
