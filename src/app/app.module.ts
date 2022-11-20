@@ -35,6 +35,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { ColaboradorUpdateComponent } from './components/colaborador/colaborador-update/colaborador-update.component';
+import { ColaboradorDeleteComponent } from './components/colaborador/colaborador-delete/colaborador-delete.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { NgxMaskModule } from 'ngx-mask';
     HeaderComponent,
     ColaboradorListComponent,
     LoginComponent,
-    ColaboradorCreateComponent
+    ColaboradorCreateComponent,
+    ColaboradorUpdateComponent,
+    ColaboradorDeleteComponent
   ],
   imports: [
     BrowserModule,
