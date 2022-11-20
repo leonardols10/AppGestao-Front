@@ -14,4 +14,8 @@ export class ColaboradorService {
   findall(): Observable<colaborador[]>  {
     return this.http.get<colaborador[]>(`${API_CONFIG.baseUrl}/colaboradores`);
   }
+
+  create(colaborador: colaborador): Observable<colaborador> {
+    return this.http.post<colaborador>(`${API_CONFIG.baseUrl}/colaboradores`, colaborador);
+  }
 }
