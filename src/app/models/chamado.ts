@@ -6,9 +6,9 @@ export interface Chamado {
     status:          string;
     titulo:          string;
     observacoes:     string;
-    tecnico:            any;
+    colaborador:            any;
     cliente:            any;
     nomeCliente:     string;
-    nomeTecnico:     string;
+    nomeColaborador:     string;
  }
  
