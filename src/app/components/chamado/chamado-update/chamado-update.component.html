@@ -13,7 +13,7 @@
 
       <div class="status-prioridade">
         <mat-form-field appearance="outline">
-            <mat-label>Selecione um status</mat-label>
+            <mat-label>{{rertornaStatus(chamado.status)}}</mat-label>
             <mat-select [(ngModel)]="chamado.status" name="status" [formControl]="status" required>
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
@@ -22,7 +22,7 @@
           </mat-form-field>   
 
           <mat-form-field appearance="outline">
-            <mat-label>Selecione uma prioridade</mat-label>
+            <mat-label>{{ rertornaPrioridade(chamado.prioridade)}}</mat-label>
             <mat-select [(ngModel)]="chamado.prioridade" name="prioridade" [formControl]="prioridade" required>
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
@@ -33,7 +33,7 @@
 
       <div class="colaborador">
          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Selecione um colaborador</mat-label>
+            <mat-label>{{ chamado.nomeColaborador }}</mat-label>
             <mat-select [(ngModel)]="chamado.colaborador" name="colaborador" [formControl]="colaborador" required>
               <mat-option *ngFor=" let col of colaboradores" value="{{col.id}}">{{col.nome}}</mat-option>
             </mat-select>
@@ -42,7 +42,7 @@
       
       <div class="cliente">
         <mat-form-field class="full-width" appearance="outline">
-           <mat-label>Selecione um cliente  </mat-label>
+           <mat-label>{{ chamado.nomeCliente }}  </mat-label>
            <mat-select [(ngModel)]="chamado.cliente" name="cliente" [formControl]="cliente" required>
              <mat-option *ngFor=" let cli of clientes" value="{{cli.id}}">{{cli.nome}}</mat-option>
            </mat-select>
@@ -55,7 +55,7 @@
           <textarea [(ngModel)]="chamado.observacoes" name="observacoes"  [formControl]="observacoes" required class="observacoes" matInput placeholder="Ex. uma descrição sobre o chamado"></textarea>
         </mat-form-field>
       </form>
-      <button class="full-width" (click)="create()" [disabled]="!validaCampos()" mat-raised-button color="primary">Atualizar</button>
+      <button class="full-width" (click)="update()" [disabled]="!validaCampos()" mat-raised-button color="primary">Atualizar</button>
       <button class="full-width" routerLink="../" mat-raised-button color="warn">Cancelar</button>
 
       
