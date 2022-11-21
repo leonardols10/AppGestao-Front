@@ -5,7 +5,7 @@
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Titulo do chamado</mat-label>
-          <input matInput placeholder="Ex. Trocar tecido" >
+          <input [formControl]="titulo" required matInput placeholder="Ex. Trocar tecido" >
         </mat-form-field>
       
         
@@ -14,15 +14,16 @@
       <div class="status-prioridade">
         <mat-form-field appearance="outline">
             <mat-label>Selecione um status</mat-label>
-            <mat-select>
+            <mat-select [formControl]="status" required>
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
               <mat-option value="2">ENCERRADO</mat-option>
             </mat-select>
           </mat-form-field>   
+
           <mat-form-field appearance="outline">
             <mat-label>Selecione uma prioridade</mat-label>
-            <mat-select>
+            <mat-select [formControl]="prioridade" required>
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
               <mat-option value="2">ALTA</mat-option>
@@ -33,7 +34,7 @@
       <div class="colaborador">
          <mat-form-field class="full-width" appearance="outline">
             <mat-label>Selecione um colaborador</mat-label>
-            <mat-select>
+            <mat-select [formControl]="colaborador" required>
               <mat-option value="0">VALDIR</mat-option>
             </mat-select>
           </mat-form-field> 
@@ -42,7 +43,7 @@
       <div class="cliente">
         <mat-form-field class="full-width" appearance="outline">
            <mat-label>Selecione um cliente  </mat-label>
-           <mat-select>
+           <mat-select [formControl]="cliente" required>
              <mat-option value="0">cliente</mat-option>
            </mat-select>
          </mat-form-field> 
@@ -51,10 +52,10 @@
       
         <mat-form-field class="full-width " appearance="outline">
           <mat-label>Leave a comment</mat-label>
-          <textarea class="descricao" matInput placeholder="Ex. uma descrição sobre o chamado"></textarea>
+          <textarea  [formControl]="descricao" required class="descricao" matInput placeholder="Ex. uma descrição sobre o chamado"></textarea>
         </mat-form-field>
       </form>
-      <button class="full-width" mat-raised-button color="primary">Adicionar</button>
+      <button class="full-width" [disabled]="!validaCampos()" mat-raised-button color="primary">Adicionar</button>
       <button class="full-width" mat-raised-button color="warn">Cancelar</button>
 
       
