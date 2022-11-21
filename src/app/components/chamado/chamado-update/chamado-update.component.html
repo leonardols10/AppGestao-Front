@@ -1,5 +1,5 @@
 <div class="container mat-elevation-z8">
-    <h1 class="full-width">Criando chamado</h1>
+    <h1 class="full-width">Atualizando chamado</h1>
     <img class="full-width" src="assets/img/chamado-create.svg" alt="imagem chamado">
 
     <form class="form">
@@ -55,7 +55,7 @@
           <textarea [(ngModel)]="chamado.observacoes" name="observacoes"  [formControl]="observacoes" required class="observacoes" matInput placeholder="Ex. uma descrição sobre o chamado"></textarea>
         </mat-form-field>
       </form>
-      <button class="full-width" (click)="create()" [disabled]="!validaCampos()" mat-raised-button color="primary">Adicionar</button>
+      <button class="full-width" (click)="create()" [disabled]="!validaCampos()" mat-raised-button color="primary">Atualizar</button>
       <button class="full-width" routerLink="../" mat-raised-button color="warn">Cancelar</button>
 
       

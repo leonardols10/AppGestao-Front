@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadosCreateComponent } from './components/chamado/chamados-create/chamados-create.component';
 import { clienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { clienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
@@ -33,6 +34,8 @@ const routes: Routes = [
 
       {path: 'chamados', component: ChamadoListComponent},
       {path: 'chamados/create', component: ChamadosCreateComponent},
+      {path: 'chamados/update/:id', component: ChamadoUpdateComponent},
+
 
 
 
