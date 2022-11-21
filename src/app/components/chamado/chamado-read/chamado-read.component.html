@@ -1,11 +1,11 @@
 <div class="container mat-elevation-z8">
-    <h1 class="full-width">Atualizando chamado</h1>
+    <h1 class="full-width">Visualizar chamado</h1>
     <img class="full-width" src="assets/img/chamado-create.svg" alt="imagem chamado">
 
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Titulo do chamado</mat-label>
-          <input [(ngModel)]="chamado.titulo" name="titulo" [formControl]="titulo" required matInput placeholder="Ex. Trocar tecido" >
+          <input [(ngModel)]="chamado.titulo" name="titulo" [disabled]="true"  matInput placeholder="Ex. Trocar tecido" >
         </mat-form-field>
       
         
@@ -14,7 +14,7 @@
       <div class="status-prioridade">
         <mat-form-field appearance="outline">
             <mat-label> STATUS ({{rertornaStatus(chamado.status)}})</mat-label>
-            <mat-select [(ngModel)]="chamado.status" name="status" [formControl]="status" required>
+            <mat-select [disabled]="true" [(ngModel)]="chamado.status" name="status" >
               <mat-option value="0">ABERTO</mat-option>
               <mat-option value="1">EM ANDAMENTO</mat-option>
               <mat-option value="2">ENCERRADO</mat-option>
@@ -23,7 +23,7 @@
 
           <mat-form-field appearance="outline">
             <mat-label> PRIORIDADE ({{ rertornaPrioridade(chamado.prioridade)}})</mat-label>
-            <mat-select [(ngModel)]="chamado.prioridade" name="prioridade" [formControl]="prioridade" required>
+            <mat-select [disabled]="true" [(ngModel)]="chamado.prioridade" name="prioridade" >
               <mat-option value="0">BAIXA</mat-option>
               <mat-option value="1">MÉDIA</mat-option>
               <mat-option value="2">ALTA</mat-option>
@@ -34,8 +34,8 @@
       <div class="colaborador">
          <mat-form-field class="full-width" appearance="outline">
             <mat-label> COLABORADOR ({{ chamado.nomeColaborador }})</mat-label>
-            <mat-select [(ngModel)]="chamado.colaborador" name="colaborador" [formControl]="colaborador" required>
-              <mat-option *ngFor=" let col of colaboradores" value="{{col.id}}">{{col.nome}}</mat-option>
+            <mat-select [disabled]="true" [(ngModel)]="chamado.colaborador" name="colaborador" >
+              <mat-option >{{chamado.nomeColaborador}</mat-option>
             </mat-select>
           </mat-form-field> 
       </div>
@@ -43,8 +43,8 @@
       <div class="cliente">
         <mat-form-field class="full-width" appearance="outline">
            <mat-label> CLIENTE ({{ chamado.nomeCliente }})  </mat-label>
-           <mat-select [(ngModel)]="chamado.cliente" name="cliente" [formControl]="cliente" required>
-             <mat-option *ngFor=" let cli of clientes" value="{{cli.id}}">{{cli.nome}}</mat-option>
+           <mat-select [disabled]="true" [(ngModel)]="chamado.cliente" name="cliente" >
+             <mat-option >{{chamado.nomeCliente}}</mat-option>
            </mat-select>
          </mat-form-field> 
      </div>
@@ -52,11 +52,10 @@
       
         <mat-form-field class="full-width " appearance="outline">
           <mat-label>Deixe uma observação</mat-label>
-          <textarea [(ngModel)]="chamado.observacoes" name="observacoes"  [formControl]="observacoes" required class="observacoes" matInput placeholder="Ex. uma descrição sobre o chamado"></textarea>
+          <textarea [disabled]="true" [(ngModel)]="chamado.observacoes" name="observacoes"   class="observacoes" matInput ></textarea>
         </mat-form-field>
       </form>
-      <button class="full-width" (click)="update()" [disabled]="!validaCampos()" mat-raised-button color="primary">Atualizar</button>
-      <button class="full-width" routerLink="../../" mat-raised-button color="warn">Cancelar</button>
+      <button class="full-width" routerLink="../../" mat-raised-button color="warn">Retornar</button>
 
       
       
