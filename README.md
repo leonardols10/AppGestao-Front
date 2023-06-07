@@ -1,27 +1,73 @@
-# Appgestao
+# App de Gestão de Chamados
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
+Este é o front-end do aplicativo de gestão de chamados. O aplicativo é construído usando o framework Angular.
 
-## Development server
+O back-end correspondente deste aplicativo pode ser encontrado no repositório [AppGestao-Back](https://github.com/leonardols10/AppGestao-Back).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalação
 
-## Code scaffolding
+Siga as instruções abaixo para configurar o ambiente de desenvolvimento e executar o aplicativo localmente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Pré-requisitos
 
-## Build
+Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js: [https://nodejs.org](https://nodejs.org)
+- Angular CLI: Execute o seguinte comando no terminal para instalar o Angular CLI globalmente:
 
-## Running unit tests
+npm install -g @angular/cli
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Passos de instalação
 
-## Running end-to-end tests
+1. Clone este repositório para o seu diretório local:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+git clone https://github.com/leonardols10/AppGestao-Front.git
 
-## Further help
+2. Navegue até o diretório do projeto:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+cd appgestao
+
+3. Instale as dependências do projeto:
+
+npm install
+
+## Executando o aplicativo
+
+Para iniciar o servidor de desenvolvimento e executar o aplicativo, execute o seguinte comando:
+
+npm start
+
+O aplicativo será iniciado e estará disponível em [http://localhost:4200](http://localhost:4200).
+
+## Construção
+
+Se você deseja gerar uma versão otimizada do aplicativo para implantação, execute o seguinte comando:
+npm run build
+
+
+Os arquivos de construção serão gerados no diretório `dist/`. Você pode implantar esses arquivos em um servidor web para disponibilizar o aplicativo.
+
+## Back-end
+
+O back-end correspondente deste aplicativo pode ser encontrado no repositório [AppGestao-Back](https://github.com/leonardols10/AppGestao-Back). Certifique-se de configurar e iniciar o back-end antes de utilizar este aplicativo.
+
+## Outras informações
+
+Este aplicativo de gestão de chamados usa as seguintes bibliotecas e dependências:
+
+- Angular: framework de desenvolvimento web.
+- Angular Material: biblioteca de componentes UI para Angular.
+- ngx-mask: biblioteca para aplicar máscaras em campos de formulário.
+- ngx-toastr: biblioteca para exibir notificações e mensagens ao usuário.
+
+Para mais informações sobre como desenvolver o aplicativo e personalizá-lo, consulte a documentação oficial do [Angular](https://angular.io) e do [Angular Material](https://material.angular.io).
+
+## Contribuição
+
+Se você encontrar problemas, bugs ou tiver sugestões para melhorias, sinta-se à vontade para abrir uma "issue" neste repositório. Ficaremos felizes em receber contribuições da comunidade.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+
